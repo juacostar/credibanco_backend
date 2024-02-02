@@ -35,4 +35,9 @@ public class CardController {
        return ResponseEntity.ok(cardService.addBalance(addBalanceRequest));
    }
 
+   @GetMapping(path = "card/balance/{cardId}")
+    public ResponseEntity<Object> getBalance(@PathVariable String cardId){
+       return ResponseEntity.ok(cardService.getBalance(cardId));
+   }
+
 }
